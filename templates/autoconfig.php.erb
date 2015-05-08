@@ -1,0 +1,21 @@
+<?php
+/**
+*   File Managed by Puppet
+*   DO NOT EDIT ! ! !
+*/
+$AUTOCONFIG = array(
+  "dbtype"        => "<%= @db_type %>",
+  "dbname"        => "<%= @db_name %>",
+  "dbuser"        => "<%= @db_user %>",
+  "dbpass"        => "<%= @db_pass %>",
+  "dbhost"        => "<%= @db_host %>",
+  "dbtableprefix" => "<%= @db_table_prefix %>",
+<%  if @admin_user -%>
+  "adminlogin"    => "<%= @admin_user %>",
+<%  end -%>
+<%  if @admin_pass -%>
+  "adminpass"     => "<%= @admin_pass %>",
+<%  end -%>
+  "directory"     => "<%= @datadir %>",
+);
+

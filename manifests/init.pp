@@ -60,6 +60,19 @@ class owncloud (
   $url                  = "owncloud.${::domain}",
   $serveraliases        = undef,
   $datadir              = $::owncloud::params::datadir,
+
+  ## Config Settings ##
+  $language             = 'en',
+  $default_app          = 'files',
+  $knowledgebase_enable = true,
+  $enable_avatars       = true,
+  $change_display_names = true,
+  $session_keepalive    = true,
+  $user_backends        = undef,
+  $mail_domain          = $::domain,
+  $mail_user            = 'owncloud',
+  $mail_smtpmode        = 'sendmail',
+  $config_hash          = {},
   ) inherits ::owncloud::params {
 
   # define some variables for validation
